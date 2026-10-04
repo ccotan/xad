@@ -1,0 +1,1 @@
+document.querySelectorAll("[data-ip]").forEach(btn=>btn.addEventListener("click",async()=>{const ip=btn.dataset.ip;try{await navigator.clipboard.writeText(ip)}catch(e){}const t=document.querySelector(".toast");if(t){t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1500)}}));
